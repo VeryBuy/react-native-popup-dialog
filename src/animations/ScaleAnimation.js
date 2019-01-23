@@ -11,7 +11,7 @@ export default class ScaleAnimation extends Animation {
           toValue,
           velocity: 0,
           tension: 65,
-          friction: 7,
+          friction: 10,
           useNativeDriver: this.useNativeDriver,
         }).start(onFinished);
         break;
@@ -20,7 +20,7 @@ export default class ScaleAnimation extends Animation {
           toValue,
           velocity: 0,
           tension: 65,
-          friction: 7,
+          friction: 10,
           useNativeDriver: this.useNativeDriver,
         }).start(onFinished);
         break;
@@ -34,7 +34,7 @@ export default class ScaleAnimation extends Animation {
       {
         scale: this.animate.interpolate({
           inputRange: [0, 1],
-          outputRange: [0, 1],
+          outputRange: [0.6, 1],
         }),
       },
     ];
