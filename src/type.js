@@ -3,7 +3,7 @@
 import { type Element } from 'react';
 import DialogButton from './components/DialogButton';
 
-export type ActionList = Array<Element<DialogButton>>;
+export type ActionList = any;
 
 export type DialogProps = {
   visible: boolean;
