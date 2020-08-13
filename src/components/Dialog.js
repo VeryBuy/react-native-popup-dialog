@@ -87,6 +87,8 @@ class Dialog extends Component<DialogProps, State> {
     onDismiss: () => {},
     actions: null,
     useNativeDriver: true,
+    nativeID: null,
+    testID: null,
   }
 
   constructor(props: DialogProps) {
@@ -186,6 +188,8 @@ class Dialog extends Component<DialogProps, State> {
       containerStyle,
       actionsBordered,
       actionContainerStyle,
+      nativeID,
+      testID,
     } = this.props;
 
     const overlayVisible = hasOverlay && [DIALOG_OPENING, DIALOG_OPENED].includes(dialogState);
@@ -199,7 +203,7 @@ class Dialog extends Component<DialogProps, State> {
     ) : null;
 
     return (
-      <View style={[styles.container, hidden, containerStyle]}>
+      <View style={[styles.container, hidden, containerStyle]} {...{nativeID, testID}}>
         <Overlay
           pointerEvents={this.pointerEvents}
           visible={overlayVisible}

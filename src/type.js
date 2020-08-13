@@ -28,6 +28,8 @@ export type DialogProps = {
   onDismiss?: () => void;
   actions?: ActionList;
   useNativeDriver?: boolean;
+  nativeID?: String;
+  testID?: String;
 }
 
 export type DialogActionListProps = {
